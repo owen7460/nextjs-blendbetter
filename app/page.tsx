@@ -22,8 +22,9 @@ export default function Home() {
             <Link
               href="/dashboard"
               className="text-white px-6 py-2 rounded-full bg-linear-to-r from-purple-500 to-pink-500 text-lg font-bold"
-            ></Link>
-            <span className="">Get Started</span>
+            >
+              Get Started
+            </Link>
           </div>
         </div>
 
