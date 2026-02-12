@@ -46,8 +46,21 @@ export function AppSidebar() {
           </SidebarMenuButton>
         </SidebarGroup>
 
-        <SidebarFooter className="mt-auto mb-10">
-          <p>This app is created by Owen.</p>
+        <SidebarFooter className="mt-auto mb-8 ml-4">
+          <p className="text-sm">This app is created by Owen.</p>
+          <span className="text-sm">Version 1.0.0 Beta</span>
+          <p className="text-sm">
+            To know more about me
+            <p className="mt-4">
+              <a
+                href="https://owen-ca.com"
+                target="_blank"
+                className="text-sm underline text-white bg-black px-2 py-1 rounded-md"
+              >
+                https://owen-ca.com
+              </a>
+            </p>
+          </p>
         </SidebarFooter>
       </SidebarMenu>
     </Sidebar>
