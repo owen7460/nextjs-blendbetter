@@ -1,6 +1,6 @@
 "use client";
 
-import LiquidEther from "../components/LiquidEther";
+import LiquidEther from "@/components/LiquidEther";
 import Link from "next/link";
 export default function Home() {
   return (
