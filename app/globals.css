@@ -125,10 +125,53 @@
   }
 }
 
+@keyframes move-in{
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes opacity-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
+@layer components {
+  .textFirst {
+    animation: move-in 0.3s ease-in forwards;
+  }
 
+  .textSecond {
+    animation: move-in 0.4s ease-in forwards;
+    animation-delay: 0.1s;
+  }
 
+  .textThird {
+    animation: move-in 0.3s ease-in forwards;
+    animation-delay: 0.2s;
+  }
+
+  .buttonFirst {
+    animation: opacity-in 0.3s ease forwards;
+    animation-delay: 0.3s;
+  }
+
+  .buttonSecond {
+    animation: opacity-in 0.4s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+}
 
 
 .fruit-selected {
