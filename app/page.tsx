@@ -18,8 +18,8 @@ export default function Home() {
             Blendbetter
           </h1>
           <p className="textSecond text-white text-2xl max-w-4xl text-center">
-            An interactive smoothie builder that lets you customize ingredients
-            and try your creation blend instantly.
+            Build your perfect drinks — smoothies, bubble teas, cocktails — and
+            see them come to life instantly.
           </p>
           <p className="textThird text-white text-lg max-w-2xl text-center">
             This app is an AI-powered tool that helps you turn the fruits you
