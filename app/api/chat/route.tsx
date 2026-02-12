@@ -15,22 +15,3 @@ export async function POST(request: NextRequest) {
   });
   return result.toUIMessageStreamResponse();
 }
-
-// [
-//       {
-//         role: "user",
-//         content:
-//       },
-//       {
-//         role: "assistant",
-//         content: "Hey, I'm deepseek, what can I help you with？",
-//       },
-//     ],
-
-// [
-//       { role: "user", content: "hey" },
-//       {
-//         role: "assistant",
-//         content: "Hey, I'm deepseek, what can I help you with？",
-//       },
-//     ],

@@ -21,6 +21,41 @@ const fruits = [
     name: "Orange",
     image: "/images/orange.jpg",
   },
+  {
+    id: 4,
+    name: "Pineapple",
+    image: "/images/pineapple.jpg",
+  },
+  {
+    id: 5,
+    name: "Strawberry",
+    image: "/images/strawberry.jpg",
+  },
+  {
+    id: 6,
+    name: "Watermelon",
+    image: "/images/watermelon.jpg",
+  },
+  {
+    id: 7,
+    name: "Kiwi",
+    image: "/images/kiwi.jpg",
+  },
+  {
+    id: 8,
+    name: "Mango",
+    image: "/images/mango.jpg",
+  },
+  {
+    id: 9,
+    name: "Peach",
+    image: "/images/peach.jpg",
+  },
+  {
+    id: 10,
+    name: "Pear",
+    image: "/images/pear.jpg",
+  },
 ];
 
 export default function Dashboard() {
@@ -53,9 +88,14 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className="flex items-center justify-center gap-4 w-full">
+      <div className="grid grid-cols-5 justify-center gap-8 mb-12">
         {fruits.map((fruit) => (
-          <div key={fruit.id} className="w-40 h-40 cursor-pointer">
+          <div
+            key={fruit.id}
+            className={`relative w-40 h-40 cursor-pointer rounded-3xl
+    ${selectedFruits.includes(fruit.name) ? "fruit-selected" : ""}
+  `}
+          >
             <Image
               loading="eager"
               src={fruit.image}
@@ -80,9 +120,16 @@ export default function Dashboard() {
       </Button>
 
       <div className="flex items-center justify-center gap-4 mt-10">
-        {selectedFruits.map((fruit) => (
-          <div key={fruit}>{fruit}</div>
-        ))}
+        <p>
+          You have selected:{" "}
+          {selectedFruits.map((fruit) => (
+            <span key={fruit}>
+              {" "}
+              &nbsp;
+              {fruit}
+            </span>
+          ))}
+        </p>
       </div>
 
       <div className="flex items-center justify-center gap-6 mt-4">
