@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useChat } from "@ai-sdk/react";
+import { Button } from "@/components/ui/button";
 const fruits = [
   {
     id: 1,
@@ -21,6 +23,7 @@ const fruits = [
 ];
 
 export default function Dashboard() {
+  const { messages, sendMessage } = useChat();
   const [selectedFruits, setSelectedFruits] = useState<string[]>([]);
   const handleFruitClick = (fruitName: string) => {
     if (selectedFruits.includes(fruitName)) {
@@ -29,6 +32,16 @@ export default function Dashboard() {
       setSelectedFruits([...selectedFruits, fruitName]);
     }
   };
+  const handleSendMessage = () => {
+    if (selectedFruits.length === 0) {
+      return;
+    }
+
+    sendMessage({
+      text: `Please generate a smoothie recipe for ${selectedFruits.join(", ")}`,
+    });
+  };
+
   return (
     <>
       <div className="flex items-center justify-center gap-4 w-full">
@@ -53,11 +66,15 @@ export default function Dashboard() {
         Please choose 1-3 kinds of fruits, you can check what you have in your
         fridge
       </p>
-      <div className="flex items-center justify-center gap-4 mt-10">
-        <p>Selected Fruits:</p>
-        {selectedFruits.map((fruit) => (
-          <p key={fruit}>{fruit}</p>
-        ))}
+      <div className="flex items-center justify-center gap-4 mt-10"></div>
+
+      <div className="flex items-center justify-center gap-4 mt-4">
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <Button onClick={() => handleSendMessage()}>Generate</Button>
+        </div>
       </div>
     </>
   );
