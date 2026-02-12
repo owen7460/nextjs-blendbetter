@@ -11,8 +11,7 @@ import {
 } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { BookMarked, Hop } from "lucide-react";
-import { isatty } from "tty";
+import { BookMarked, Hop, ArrowBigLeft } from "lucide-react";
 
 export function AppSidebar() {
   const pathname = usePathname();
@@ -22,7 +21,7 @@ export function AppSidebar() {
         <SidebarHeader>
           <SidebarMenuButton asChild>
             <Link className="text-lg font-bold" href="/">
-              Home Page
+              <ArrowBigLeft /> Back to Home Page
             </Link>
           </SidebarMenuButton>
         </SidebarHeader>
