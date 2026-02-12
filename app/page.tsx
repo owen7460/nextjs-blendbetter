@@ -1,7 +1,7 @@
 "use client";
 
 import LiquidEther from "../components/LiquidEther";
-
+import Link from "next/link";
 export default function Home() {
   return (
     <>
@@ -16,12 +16,14 @@ export default function Home() {
             and try your creation blend instantly.
           </p>
           <div className="flex items-center justify-center gap-8">
-            <span className="text-white bg-transparent border border-white px-4 py-2 rounded-full text-lg font-bold">
+            <span className="text-white bg-transparent border border-white px-6 py-2 rounded-full text-lg font-bold">
               Learn More
             </span>
-            <span className="text-white px-4 py-2 rounded-full bg-linear-to-r from-purple-500 to-pink-500 text-lg font-bold">
-              Get Started
-            </span>
+            <Link
+              href="/dashboard"
+              className="text-white px-6 py-2 rounded-full bg-linear-to-r from-purple-500 to-pink-500 text-lg font-bold"
+            ></Link>
+            <span className="">Get Started</span>
           </div>
         </div>
 
