@@ -9,9 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/deepseek": "^2.0.19",
     "@ai-sdk/openai": "^3.0.27",
-    "@ai-sdk/react": "^3.0.84",
-    "ai": "^6.0.82",
+    "@ai-sdk/react": "^3.0.85",
+    "ai": "^6.0.83",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gsap": "^3.14.2",

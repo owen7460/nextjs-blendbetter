@@ -1,30 +1,36 @@
-import { createOpenAI } from "@ai-sdk/openai";
+import { createDeepSeek } from "@ai-sdk/deepseek";
 import { NextRequest } from "next/server";
 import { streamText, convertToModelMessages } from "ai";
-
-const openai = createOpenAI({
-  apiKey: process.env.AI_GATEWAY_API_KEY,
+const deepseek = createDeepSeek({
+  apiKey: process.env.DEEPSEEK_API_KEY,
 });
 
 export async function POST(request: NextRequest) {
   const { messages } = await request.json();
   const result = streamText({
-    model: "gpt-4o-mini",
-    prompt: "Hello, how are you?",
+    model: deepseek("deepseek-chat"),
+    messages: await convertToModelMessages(messages),
+    system:
+      "You are a helpful assistant that can answer questions and help with tasks.",
   });
-
-  console.log("API Key:", process.env.OPENAI_API_KEY);
-  return result.toTextStreamResponse();
+  return result.toUIMessageStreamResponse();
 }
 
-// import { NextRequest } from "next/server";
+// [
+//       {
+//         role: "user",
+//         content:
+//       },
+//       {
+//         role: "assistant",
+//         content: "Hey, I'm deepseek, what can I help you with？",
+//       },
+//     ],
 
-// export async function GET(request: NextRequest) {
-//   // 打印环境变量到终端
-//   console.log("OPENAI_API_KEY:", process.env.OPENAI_API_KEY);
-
-//   return new Response(JSON.stringify({ status: "ok" }), {
-//     status: 200,
-//     headers: { "Content-Type": "application/json" },
-//   });
-// }
+// [
+//       { role: "user", content: "hey" },
+//       {
+//         role: "assistant",
+//         content: "Hey, I'm deepseek, what can I help you with？",
+//       },
+//     ],

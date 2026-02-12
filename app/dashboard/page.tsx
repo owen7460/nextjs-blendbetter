@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useChat } from "@ai-sdk/react";
 import { Button } from "@/components/ui/button";
+
 const fruits = [
   {
     id: 1,
@@ -24,6 +25,14 @@ const fruits = [
 
 export default function Dashboard() {
   const { messages, sendMessage } = useChat();
+  const chatContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    chatContainerRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, [messages]);
+
   const [selectedFruits, setSelectedFruits] = useState<string[]>([]);
   const handleFruitClick = (fruitName: string) => {
     if (selectedFruits.includes(fruitName)) {
@@ -32,7 +41,7 @@ export default function Dashboard() {
       setSelectedFruits([...selectedFruits, fruitName]);
     }
   };
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (selectedFruits.length === 0) {
       return;
     }
@@ -66,14 +75,28 @@ export default function Dashboard() {
         Please choose 1-3 kinds of fruits, you can check what you have in your
         fridge
       </p>
-      <div className="flex items-center justify-center gap-4 mt-10"></div>
+      <Button className="mt-4" onClick={() => handleSendMessage()}>
+        Generate
+      </Button>
 
-      <div className="flex items-center justify-center gap-4 mt-4">
-        <div>
-          <div></div>
-        </div>
-        <div>
-          <Button onClick={() => handleSendMessage()}>Generate</Button>
+      <div className="flex items-center justify-center gap-4 mt-10">
+        {selectedFruits.map((fruit) => (
+          <div key={fruit}>{fruit}</div>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-center gap-6 mt-4">
+        <div className="w-200">
+          {messages.map((message) => (
+            <div key={message.id}>
+              {message.parts.map((part, index) => (
+                <div key={message.id + index}>
+                  {part.type === "text" ? part.text : ""}
+                </div>
+              ))}
+            </div>
+          ))}
+          <div ref={chatContainerRef}></div>
         </div>
       </div>
     </>
