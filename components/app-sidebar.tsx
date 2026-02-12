@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { BookMarked, Hop } from "lucide-react";
+import { isatty } from "tty";
 
 export function AppSidebar() {
   const pathname = usePathname();
@@ -25,16 +27,23 @@ export function AppSidebar() {
           </SidebarMenuButton>
         </SidebarHeader>
 
-        <SidebarGroup>
-          <SidebarGroupLabel>Fruits</SidebarGroupLabel>
+        <SidebarGroup className="space-y-3">
+          <SidebarGroupLabel className="text-xs">
+            🍎🍌🍇🍓🍒Fruits
+          </SidebarGroupLabel>
+          <hr />
           <SidebarMenuButton asChild isActive={pathname === "/dashboard"}>
-            <Link href="/dashboard">Let's Blend</Link>
+            <Link href="/dashboard">
+              <Hop /> Let's Blend
+            </Link>
           </SidebarMenuButton>
           <SidebarMenuButton
             asChild
             isActive={pathname === "/dashboard/collections"}
           >
-            <Link href="/dashboard/collections">Your Collections</Link>
+            <Link href="/dashboard/collections">
+              <BookMarked /> Your Collections
+            </Link>
           </SidebarMenuButton>
         </SidebarGroup>
 
