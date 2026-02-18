@@ -82,11 +82,7 @@ export default function Dashboard() {
     }
 
     sendMessage({
-      text: `Please generate a bubble tea recipe using ${selectedFruits.join(
-        ", ",
-      )}. 
-Format the response in readable paragraphs, with each step on a new line. 
-Include ingredients and instructions separately.`,
+      text: `Please generate a smoothie recipe using ${selectedFruits.join(", ")}.`,
     });
   };
 
