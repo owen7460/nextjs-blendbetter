@@ -11,7 +11,15 @@ import {
 } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { BookMarked, Hop, ArrowBigLeft } from "lucide-react";
+import {
+  BookMarked,
+  Hop,
+  ArrowBigLeft,
+  CupSoda,
+  Snowflake,
+  Refrigerator,
+  Milk,
+} from "lucide-react";
 
 export function AppSidebar() {
   const pathname = usePathname();
@@ -33,7 +41,39 @@ export function AppSidebar() {
           <hr />
           <SidebarMenuButton asChild isActive={pathname === "/dashboard"}>
             <Link href="/dashboard">
-              <Hop /> Let's Blend
+              <Hop /> Blend Smoothie
+            </Link>
+          </SidebarMenuButton>
+          <SidebarMenuButton
+            asChild
+            isActive={pathname === "/dashboard/bubbleTea"}
+          >
+            <Link href="/dashboard/bubbletea">
+              <CupSoda /> Blend Bubble Tea
+            </Link>
+          </SidebarMenuButton>
+          <SidebarMenuButton
+            asChild
+            isActive={pathname === "/dashboard/slushie"}
+          >
+            <Link href="/dashboard/slushie">
+              <Snowflake /> Blend Slushie
+            </Link>
+          </SidebarMenuButton>
+          <SidebarMenuButton
+            asChild
+            isActive={pathname === "/dashboard/icedblendeddrink"}
+          >
+            <Link href="/dashboard/icedblendeddrink">
+              <Refrigerator /> Blend Iced Blended Drink
+            </Link>
+          </SidebarMenuButton>
+          <SidebarMenuButton
+            asChild
+            isActive={pathname === "/dashboard/yogurtdrink"}
+          >
+            <Link href="/dashboard/yogurtdrink">
+              <Milk /> Blend Yogurt Drink
             </Link>
           </SidebarMenuButton>
           <SidebarMenuButton
@@ -49,18 +89,14 @@ export function AppSidebar() {
         <SidebarFooter className="mt-auto mb-8 ml-4">
           <p className="text-sm">This app is created by Owen.</p>
           <span className="text-sm">Version 1.0.0 Beta</span>
-          <p className="text-sm">
-            To know more about me
-            <p className="mt-4">
-              <a
-                href="https://owen-ca.com"
-                target="_blank"
-                className="text-sm underline text-white bg-black px-2 py-1 rounded-md"
-              >
-                https://owen-ca.com
-              </a>
-            </p>
-          </p>
+          <p className="text-sm">To know more about me</p>
+          <a
+            href="https://owen-ca.com"
+            target="_blank"
+            className="text-sm underline text-white bg-black px-2 py-1 rounded-md"
+          >
+            https://owen-ca.com
+          </a>
         </SidebarFooter>
       </SidebarMenu>
     </Sidebar>

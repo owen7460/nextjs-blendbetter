@@ -82,7 +82,7 @@ export default function Dashboard() {
     }
 
     sendMessage({
-      text: `Please generate a smoothie recipe using ${selectedFruits.join(", ")}.`,
+      text: `Please generate a yogurt drink recipe using ${selectedFruits.join(", ")}.`,
     });
   };
 
@@ -109,7 +109,7 @@ export default function Dashboard() {
         ))}
       </div>
       <h2 className="mt-10 text-center font-semibold">
-        Let's choose your fruit for smoothie.
+        Let's choose your fruit for yogurt drink.
       </h2>
       <p>
         Please choose 1-3 kinds of fruits, you can check what you have in your
