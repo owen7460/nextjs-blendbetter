@@ -79,9 +79,15 @@ export function AppSidebar() {
           <SidebarMenuButton
             asChild
             isActive={pathname === "/dashboard/collections"}
-          >
+          ></SidebarMenuButton>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Your Collections</SidebarGroupLabel>
+          <hr />
+          <SidebarMenuButton asChild>
             <Link href="/dashboard/collections">
-              <BookMarked /> Your Collections
+              <BookMarked /> Collections
             </Link>
           </SidebarMenuButton>
         </SidebarGroup>
