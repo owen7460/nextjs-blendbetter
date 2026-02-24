@@ -109,7 +109,7 @@ export default function Dashboard() {
         ))}
       </div>
       <h2 className="mt-10 text-center font-semibold">
-        Let's choose your fruit for yogurt drink.
+        Let's choose your fruit for cocktail.
       </h2>
       <p>
         Please choose 1-3 kinds of fruits, you can check what you have in your
