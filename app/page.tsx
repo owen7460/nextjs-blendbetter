@@ -9,6 +9,9 @@ export default function Home() {
         className="min-h-screen bg-transparent bg-[url('/images/blendbetterBG.png')] bg-cover bg-center"
         style={{ width: "100%", height: 600, position: "relative" }}
       >
+        <p className="text-gray-800 text-sm absolute z-100 bottom-0 left-0 translate-x-1/2 -translate-y-1/2">
+          Version 1.0.1
+        </p>
         <p className=" text-gray-800 text-sm max-w-2xl text-center absolute z-100 top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/2">
           Do you know each year, Canadians waste over 500,000 tonnes of fruit,
           which is equivalent to more than 4,000 Olympic-sized swimming pools

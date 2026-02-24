@@ -19,6 +19,7 @@ import {
   Snowflake,
   Refrigerator,
   Milk,
+  Martini,
 } from "lucide-react";
 
 export function AppSidebar() {
@@ -78,6 +79,14 @@ export function AppSidebar() {
           </SidebarMenuButton>
           <SidebarMenuButton
             asChild
+            isActive={pathname === "/dashboard/cocktail"}
+          >
+            <Link href="/dashboard/cocktail">
+              <Martini /> Blend Cocktail
+            </Link>
+          </SidebarMenuButton>
+          <SidebarMenuButton
+            asChild
             isActive={pathname === "/dashboard/collections"}
           ></SidebarMenuButton>
         </SidebarGroup>
@@ -94,7 +103,7 @@ export function AppSidebar() {
 
         <SidebarFooter className="mt-auto mb-8 ml-4">
           <p className="text-sm">This app is created by Owen.</p>
-          <span className="text-sm">Version 1.0.0 Beta</span>
+          <span className="text-sm">Version 1.0.1</span>
           <p className="text-sm">To know more about me</p>
           <a
             href="https://owen-ca.com"

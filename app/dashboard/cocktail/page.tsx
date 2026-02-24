@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { useChat } from "@ai-sdk/react";
 import { Button } from "@/components/ui/button";
-import ReactMarkdown from "react-markdown";
 
 const fruits = [
   {
@@ -83,7 +82,7 @@ export default function Dashboard() {
     }
 
     sendMessage({
-      text: `Please generate a smoothie recipe using ${selectedFruits.join(", ")}.`,
+      text: `Please generate a cocktail recipe using ${selectedFruits.join(", ")}.`,
     });
   };
 
@@ -110,7 +109,7 @@ export default function Dashboard() {
         ))}
       </div>
       <h2 className="mt-10 text-center font-semibold">
-        Let's choose your fruit for smoothie.
+        Let's choose your fruit for yogurt drink.
       </h2>
       <p>
         Please choose 1-3 kinds of fruits, you can check what you have in your
@@ -139,11 +138,7 @@ export default function Dashboard() {
             <div key={message.id}>
               {message.parts.map((part, index) => (
                 <div key={message.id + index}>
-                  {part.type === "text" ? (
-                    <ReactMarkdown>{part.text}</ReactMarkdown>
-                  ) : (
-                    ""
-                  )}
+                  {part.type === "text" ? part.text : ""}
                 </div>
               ))}
             </div>
