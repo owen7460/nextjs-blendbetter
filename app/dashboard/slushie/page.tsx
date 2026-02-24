@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { useChat } from "@ai-sdk/react";
 import { Button } from "@/components/ui/button";
-
+import ReactMarkdown from "react-markdown";
 const fruits = [
   {
     id: 1,
@@ -138,7 +138,11 @@ export default function Dashboard() {
             <div key={message.id}>
               {message.parts.map((part, index) => (
                 <div key={message.id + index}>
-                  {part.type === "text" ? part.text : ""}
+                  {part.type === "text" ? (
+                    <ReactMarkdown>{part.text}</ReactMarkdown>
+                  ) : (
+                    ""
+                  )}
                 </div>
               ))}
             </div>
