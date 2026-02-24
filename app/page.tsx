@@ -33,7 +33,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-8">
             <span className="buttonFirst text-gray-800 bg-transparent border border-gray-800 px-6 py-2 rounded-full text-lg font-bold">
               <Link href="https://owen-ca.com" target="_blank">
-                Know More about Me
+                About Me
               </Link>
             </span>
             <Link
