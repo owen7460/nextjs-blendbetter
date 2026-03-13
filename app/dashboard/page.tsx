@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react";
 import { useChat } from "@ai-sdk/react";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
+import FullScreenLottieFade from "@/components/LottieAnimation";
 
 const fruits = [
   {
@@ -62,6 +63,7 @@ const fruits = [
 export default function Dashboard() {
   const { messages, sendMessage } = useChat();
   const chatContainerRef = useRef<HTMLDivElement>(null);
+  const [showPage, setShowPage] = useState(false);
 
   useEffect(() => {
     chatContainerRef.current?.scrollIntoView({
@@ -89,6 +91,8 @@ export default function Dashboard() {
 
   return (
     <>
+      {!showPage && <FullScreenLottieFade onFinish={() => setShowPage(true)} />}
+
       <div className="grid grid-cols-5 justify-center gap-8 mb-12">
         {fruits.map((fruit) => (
           <div

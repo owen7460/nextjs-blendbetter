@@ -103,7 +103,7 @@ export function AppSidebar() {
 
         <SidebarFooter className="mt-auto mb-8 ml-4">
           <p className="text-sm">This app is created by Owen.</p>
-          <span className="text-sm">Version 1.0.1</span>
+          <span className="text-sm">Version 1.0.2</span>
           <p className="text-sm">To know more about me</p>
           <a
             href="https://owen-ca.com"
