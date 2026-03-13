@@ -14,10 +14,10 @@ export default function Home() {
           which is equivalent to more than 4,000 Olympic-sized swimming pools
         </p>
         <div className="absolute z-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-8">
-          <h1 className="textFirst text-gray-800 text-8xl font-bold">
+          <h1 className="textFirst text-gray-800 text-9xl font-bold antialiased tracking-tight">
             BlendBetter
           </h1>
-          <p className="textSecond text-zinc-600 text-2xl max-w-4xl text-center">
+          <p className="textSecond text-zinc-600 text-3xl max-w-4xl text-center">
             Build your perfect drinks — smoothies, bubble teas, cocktails — and
             see them come to life instantly.
           </p>
