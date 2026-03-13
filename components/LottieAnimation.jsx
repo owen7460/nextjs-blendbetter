@@ -33,7 +33,7 @@ export default function FullScreenLottieFade({ onFinish }) {
         animationData={animationData}
         loop={false}
         autoplay={true}
-        className="w-full h-full max-w-screen-lg max-h-screen-lg object-contain"
+        className="w-full h-full max-w-6xl max-h-6xl object-contain"
         onComplete={handleComplete}
       />
     </div>
