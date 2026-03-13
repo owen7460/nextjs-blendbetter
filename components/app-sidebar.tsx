@@ -47,7 +47,7 @@ export function AppSidebar() {
           </SidebarMenuButton>
           <SidebarMenuButton
             asChild
-            isActive={pathname === "/dashboard/bubbleTea"}
+            isActive={pathname === "/dashboard/bubbletea"}
           >
             <Link href="/dashboard/bubbletea">
               <CupSoda /> Blend Bubble Tea
