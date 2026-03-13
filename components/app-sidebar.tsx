@@ -14,31 +14,39 @@ import Link from "next/link";
 import {
   BookMarked,
   Hop,
-  ArrowBigLeft,
   CupSoda,
   Snowflake,
   Refrigerator,
   Milk,
   Martini,
 } from "lucide-react";
+import Image from "next/image";
 
 export function AppSidebar() {
   const pathname = usePathname();
   return (
     <Sidebar>
-      <SidebarMenu className="mt-10 h-full">
+      <SidebarMenu className="mt-5 h-full">
         <SidebarHeader>
           <SidebarMenuButton asChild>
-            <Link className="text-lg font-bold" href="/">
-              <ArrowBigLeft /> Back to Home Page
+            <Link
+              className="h-14 w-full flex items-center justify-start"
+              href="/"
+            >
+              <Image
+                src="/images/homelogo.png"
+                alt="BlendBetter"
+                width={128}
+                height={96}
+              />
             </Link>
           </SidebarMenuButton>
         </SidebarHeader>
 
-        <SidebarGroup className="space-y-3">
-          <SidebarGroupLabel className="text-xs">
+        <SidebarGroup className="space-y-2">
+          {/* <SidebarGroupLabel className="text-xs">
             🍎🍌🍇🍓🍒Fruits
-          </SidebarGroupLabel>
+          </SidebarGroupLabel> */}
           <hr />
           <SidebarMenuButton asChild isActive={pathname === "/dashboard"}>
             <Link href="/dashboard">
