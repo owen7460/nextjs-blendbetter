@@ -63,13 +63,20 @@ const fruits = [
 export default function Dashboard() {
   const { messages, sendMessage } = useChat();
   const chatContainerRef = useRef<HTMLDivElement>(null);
-  const [showPage, setShowPage] = useState(false);
+  const [showAnimation, setShowAnimation] = useState(false);
 
   useEffect(() => {
     chatContainerRef.current?.scrollIntoView({
       behavior: "smooth",
     });
   }, [messages]);
+
+  useEffect(() => {
+    const hasSeenAnimation = sessionStorage.getItem("hasSeenLottie");
+    if (!hasSeenAnimation) {
+      setShowAnimation(true);
+    }
+  }, []);
 
   const [selectedFruits, setSelectedFruits] = useState<string[]>([]);
   const handleFruitClick = (fruitName: string) => {
@@ -91,7 +98,14 @@ export default function Dashboard() {
 
   return (
     <>
-      {!showPage && <FullScreenLottieFade onFinish={() => setShowPage(true)} />}
+      {showAnimation && (
+        <FullScreenLottieFade
+          onFinish={() => {
+            sessionStorage.setItem("hasSeenLottie", "true");
+            setShowAnimation(false);
+          }}
+        />
+      )}
 
       <div className="grid grid-cols-5 justify-center gap-8 mb-12">
         {fruits.map((fruit) => (
