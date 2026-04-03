@@ -1,7 +1,16 @@
-// "use client";
-
-// import LiquidEther from "@/components/LiquidEther";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import Link from "next/link";
+
 export default function Home() {
   return (
     <>
@@ -28,11 +37,46 @@ export default function Home() {
             and stop wasting fruit!
           </p>
           <div className="flex items-center justify-center gap-8">
-            <span className="buttonFirst text-zinc-600 bg-transparent border border-gray-800 px-6 py-2 rounded-full text-lg font-bold">
-              <Link href="https://owen-ca.com" target="_blank">
-                About Me
-              </Link>
-            </span>
+            <Dialog>
+              <DialogTrigger asChild>
+                <span className="buttonFirst text-zinc-600 bg-transparent border border-gray-800 px-6 py-2 rounded-full text-lg font-bold">
+                  About us
+                </span>
+              </DialogTrigger>
+              <DialogContent className="absolute z-110">
+                <DialogHeader>
+                  <DialogTitle>The Story Behind BlendBetter</DialogTitle>
+                  <DialogDescription>
+                    With thanks to Frank (technical inspiration), Maggie (story
+                    inspiration), and Steven (visual support).
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="-mx-4 no-scrollbar max-h-[50vh] overflow-y-auto px-4 space-y-6">
+                  <p>
+                    A while ago, my girlfriend and I bought some strawberries at
+                    Safeway. They looked great, but the moment we tried them,
+                    they were unbelievably sour. After the first bite, I swore I
+                    would never eat them again.
+                  </p>
+                  <p>
+                    Later, she found some drink recipes online that used
+                    strawberries. Out of curiosity, we tried them—and they
+                    turned out to be surprisingly amazing.
+                  </p>
+                  <p>
+                    That’s when it hit me: in an AI-powered world, why not build
+                    something that can instantly turn simple ingredients into
+                    great ideas and recipes? That was the beginning of
+                    BlendBetter.
+                  </p>
+                </div>
+                <DialogFooter>
+                  <DialogClose asChild>
+                    <Button variant="outline">Close</Button>
+                  </DialogClose>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
             <Link
               href="/dashboard"
               className="buttonSecond text-white px-6 py-2 rounded-full bg-linear-to-r from-purple-500 to-pink-500 text-lg font-bold"
@@ -41,27 +85,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-
-        {/* <LiquidEther
-          colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
-          mouseForce={20}
-          cursorSize={100}
-          isViscous
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
-          // color0="#5227FF"
-          // color1="#FF9FFC"
-          // color2="#B19EEF"
-        /> */}
       </div>
     </>
   );

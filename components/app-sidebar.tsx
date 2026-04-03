@@ -112,14 +112,14 @@ export function AppSidebar() {
         <SidebarFooter className="mt-auto mb-8 ml-4">
           <p className="text-sm">This app is created by Owen.</p>
           <span className="text-sm">Version 1.0.2</span>
-          <p className="text-sm">To know more about me</p>
+          {/* <p className="text-sm">To know more about me</p>
           <a
             href="https://owen-ca.com"
             target="_blank"
             className="text-sm underline text-white bg-black px-2 py-1 rounded-md"
           >
             https://owen-ca.com
-          </a>
+          </a> */}
         </SidebarFooter>
       </SidebarMenu>
     </Sidebar>
