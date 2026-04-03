@@ -46,10 +46,6 @@ export default function Home() {
               <DialogContent className="absolute z-110">
                 <DialogHeader>
                   <DialogTitle>The Story Behind BlendBetter</DialogTitle>
-                  <DialogDescription>
-                    With thanks to Frank (technical inspiration), Maggie (story
-                    inspiration), and Steven (visual support).
-                  </DialogDescription>
                 </DialogHeader>
                 <div className="-mx-4 no-scrollbar max-h-[50vh] overflow-y-auto px-4 space-y-6">
                   <p>
@@ -70,6 +66,10 @@ export default function Home() {
                     BlendBetter.
                   </p>
                 </div>
+                <DialogDescription>
+                  With thanks to Frank (technical inspiration), Maggie (story
+                  inspiration), and Steven (visual support).
+                </DialogDescription>
                 <DialogFooter>
                   <DialogClose asChild>
                     <Button variant="outline">Close</Button>
