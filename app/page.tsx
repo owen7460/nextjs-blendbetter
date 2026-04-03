@@ -40,7 +40,7 @@ export default function Home() {
             <Dialog>
               <DialogTrigger asChild>
                 <span className="buttonFirst text-zinc-600 bg-transparent border border-gray-800 px-6 py-2 rounded-full text-lg font-bold">
-                  About us
+                  The Story
                 </span>
               </DialogTrigger>
               <DialogContent className="absolute z-110">
@@ -60,11 +60,19 @@ export default function Home() {
                     turned out to be surprisingly amazing.
                   </p>
                   <p>
+                    I also realized this is something everyone experiences in
+                    daily life—buying ingredients that don’t turn out as
+                    expected, or not knowing how to make the most out of them. I
+                    started wondering: could we do something to reduce this kind
+                    of waste, and help people turn natural, healthy food into
+                    something even better?
+                  </p>
+                  <p>
                     That’s when it hit me: in an AI-powered world, why not build
                     something that can instantly turn simple ingredients into
-                    great ideas and recipes? That was the beginning of
-                    BlendBetter.
+                    great ideas and recipes?
                   </p>
+                  <p>That idea became the beginning of BlendBetter.</p>
                 </div>
                 <DialogDescription>
                   With thanks to Frank (technical inspiration), Maggie (story
