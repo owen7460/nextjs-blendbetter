@@ -87,7 +87,7 @@ export default function Home() {
             </Dialog>
             <Link
               href="/dashboard"
-              className="buttonSecond text-white px-6 py-2 rounded-full bg-linear-to-r from-purple-500 to-pink-500 text-lg font-bold"
+              className="buttonSecond text-white px-6 py-2 rounded-full bg-linear-to-r from-green-500 to-green-700 text-lg font-bold"
             >
               Get Started
             </Link>
