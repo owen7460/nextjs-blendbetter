@@ -23,14 +23,14 @@ export default function Home() {
           which is equivalent to more than 4,000 Olympic-sized swimming pools
         </p>
         <div className="absolute z-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-8">
-          <h1 className="textFirst text-gray-800 text-9xl font-bold antialiased tracking-tight">
+          <h1 className="textFirst text-gray-800 text-9xl font-bold antialiased tracking-tight fill-mode-both">
             BlendBetter
           </h1>
-          <p className="textSecond text-zinc-600 text-3xl max-w-4xl text-center">
+          <p className="textSecond text-zinc-600 text-3xl max-w-4xl text-center fill-mode-both">
             Build your perfect drinks — smoothies, bubble teas, cocktails — and
             see them come to life instantly.
           </p>
-          <p className="textThird text-zinc-600 text-base max-w-2xl text-center">
+          <p className="textThird text-zinc-600 text-base max-w-2xl text-center fill-mode-both">
             This app is an AI-powered tool that helps you turn the fruits you
             have at home into delicious smoothies, bubble teas, beverages, or
             cocktails. Even those fruit taste sour, but let's save them together
@@ -39,7 +39,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-8">
             <Dialog>
               <DialogTrigger asChild>
-                <span className="cursor-pointer buttonFirst text-zinc-600 bg-transparent border border-gray-800 px-6 py-2 rounded-full text-lg font-bold">
+                <span className="cursor-pointer buttonFirst text-zinc-600 bg-transparent border border-gray-800 px-6 py-2 rounded-full text-lg font-bold fill-mode-both">
                   The Story
                 </span>
               </DialogTrigger>
@@ -87,7 +87,7 @@ export default function Home() {
             </Dialog>
             <Link
               href="/dashboard"
-              className="buttonSecond text-white px-6 py-2 rounded-full bg-linear-to-r from-green-500 to-green-700 text-lg font-bold"
+              className="buttonSecond fill-mode-both text-white px-6 py-2 rounded-full bg-linear-to-r from-green-500 to-green-700 text-lg font-bold"
             >
               Get Started
             </Link>
