@@ -68,9 +68,9 @@ export default function Home() {
                     something even better?
                   </p>
                   <p>
-                    That’s when it hit me: in an AI-powered world, why not build
-                    something that can instantly turn simple ingredients into
-                    great ideas and recipes?
+                    That’s when it hit me: why not build an app that can
+                    instantly turn simple ingredients into great ideas and
+                    recipes?
                   </p>
                   <p>That idea became the beginning of BlendBetter.</p>
                 </div>

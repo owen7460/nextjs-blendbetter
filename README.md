@@ -18,7 +18,7 @@ The project is motivated by reducing food waste: imperfect or sour fruit can sti
 An iOS version is planned to launch within the next few weeks. It uses on-device Vision models to instantly recognize fruit by scanning what you already have at home, creating a fast and intuitive recipe experience.
 
 <p align="left">
-  <img src="public/images/ios-version.png" width="20%" />
+  <img src="public/images/ios-version.png" width="35%" />
 </p>
 
 ## Story behind BlendBetter
@@ -27,9 +27,9 @@ A while ago, my girlfriend and I bought some strawberries at Safeway. They looke
 
 Later, she found some drink recipes online that used strawberries. Out of curiosity, we tried them—and they turned out to be surprisingly amazing.
 
-I also realized this is something everyone experiences in daily life—buying ingredients that don’t turn out as expected, or not knowing how to make the most out of them. I started wondering: could we do something to reduce this kind of waste, and help people turn natural, healthy food into something even better?
+I also realized this is something everyone experiences in daily life, I started wondering: could we do something to reduce this kind of waste, and help people turn natural, healthy food into something even better?
 
-That’s when it hit me: in an AI-powered world, why not build something that can instantly turn simple ingredients into great ideas and recipes?
+That’s when it hit me: why not build an app that can instantly turn simple ingredients into great ideas and recipes?
 
 With thanks to Frank (technical inspiration), Maggie (story inspiration), and Steven (visual support).
 
