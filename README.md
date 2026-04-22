@@ -17,8 +17,8 @@ The project is motivated by reducing food waste: imperfect or sour fruit can sti
 
 An iOS version is planned to launch within the next few weeks. It uses on-device Vision models to instantly recognize fruit by scanning what you already have at home, creating a fast and intuitive recipe experience.
 
-<p align="center">
-  <img src="public/images/ios-version.png" width="30%" />
+<p align="left">
+  <img src="public/images/ios-version.png" width="20%" />
 </p>
 
 ## Story behind BlendBetter
