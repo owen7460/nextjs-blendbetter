@@ -66,8 +66,8 @@ All you need to do is find your own idea and build it.
 - [React](https://react.dev/) 19
 - [Tailwind CSS](https://tailwindcss.com/) v4
 - [Vercel AI SDK](https://sdk.vercel.ai/docs) (`ai`, `@ai-sdk/react`) with [DeepSeek](https://deepseek.com/) (`@ai-sdk/deepseek`)
-- UI: [shadcn-style](https://ui.shadcn.com/) components, [Lucide](https://lucide.dev/) icons
-- [lottie-react](https://www.npmjs.com/package/lottie-react) for motion and visuals
+- [shadcn-style](https://ui.shadcn.com/) components, [Lucide](https://lucide.dev/) icons
+- [lottie-react](https://www.npmjs.com/package/lottie-react) for loading animation
 
 ## Prerequisites
 
