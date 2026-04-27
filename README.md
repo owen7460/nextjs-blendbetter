@@ -1,4 +1,4 @@
-# BlendBetter
+# BlendBetter 🥛🥤🍉🍇🍓
 
 **BlendBetter** is a Next.js web app that turns the fruit you have into drink ideas. Pick fruits from a visual grid, choose a beverage style, and get AI-generated recipes streamed in the chat—smoothies, bubble tea, slushies, iced blended drinks, yogurt drinks, and cocktails.
 
@@ -21,7 +21,7 @@ An iOS version is planned to launch within the next few weeks. It uses on-device
   <img src="public/images/ios-version.png" width="35%" />
 </p>
 
-## Story behind BlendBetter
+## 📝 Story behind BlendBetter
 
 A while ago, my girlfriend and I bought some strawberries at Safeway. They looked great, but the moment we tried them, they were unbelievably sour. After the first bite, I swore I would never eat them again.
 
@@ -33,7 +33,7 @@ That’s when it hit me: why not build an app that can instantly turn simple ing
 
 With thanks to Frank (technical inspiration), Maggie (story inspiration), and Steven (visual support).
 
-## Features
+## 🚀 Features
 
 - **Landing page** with project context and a short “story behind BlendBetter” dialog.
 - **Dashboard** with a sidebar to switch between drink modes.
@@ -41,12 +41,12 @@ With thanks to Frank (technical inspiration), Maggie (story inspiration), and St
 - **Streaming AI responses** via the Vercel AI SDK, rendered as Markdown.
 - **Intro animation** (Lottie) on first visit in a session.
 
-## Product Scalability
+## 📈 Product Scalability
 
 The current fruit-to-drink concept is only one implementation.  
 The same system can be repurposed into multiple recommendation products by changing assets, prompts, and categories.
 
-## Extend the Idea
+## 🔗 Extend the Idea
 
 BlendBetter was designed with reusable components and configurable prompts.
 
@@ -60,7 +60,7 @@ With small changes to images, categories, and prompts, it can be adapted into ot
 
 All you need to do is find your own idea and build it.
 
-## Tech stack
+## 🛠️ Tech stack
 
 - [Next.js](https://nextjs.org/) 16 (App Router)
 - [React](https://react.dev/) 19
@@ -69,12 +69,12 @@ All you need to do is find your own idea and build it.
 - [shadcn-style](https://ui.shadcn.com/) components, [Lucide](https://lucide.dev/) icons
 - [lottie-react](https://www.npmjs.com/package/lottie-react) for loading animation
 
-## Prerequisites
+## 📦 Prerequisites
 
 - **Node.js** — use a current LTS version compatible with Next.js 16.
 - A **DeepSeek API key** for chat generation.
 
-## Getting started
+## 🚀 Getting started
 
 1. **Clone the repository** and install dependencies:
 
@@ -118,7 +118,3 @@ All you need to do is find your own idea and build it.
 ## API
 
 Chat requests from the client go to the default AI SDK route **`/api/chat`** (see `components/Chat.tsx` and `app/api/chat/route.tsx`). Ensure `DEEPSEEK_API_KEY` is set before using **Generate**.
-
-## License
-
-Private project (`"private": true` in `package.json`). Adjust licensing if you publish the repo.
