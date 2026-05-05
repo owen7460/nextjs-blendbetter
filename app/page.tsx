@@ -75,8 +75,28 @@ export default function Home() {
                   <p>That idea became the beginning of BlendBetter.</p>
                 </div>
                 <DialogDescription>
-                  With thanks to Frank (technical inspiration), Maggie (story
-                  inspiration), and Steven (visual support).
+                  With thanks to{" "}
+                  <a
+                    target="_blank"
+                    href="https://hangxigood.github.io/portfolio/"
+                  >
+                    <ins>Frank</ins>
+                  </a>
+                  (technical inspiration),{" "}
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/maggie-chen-02622428b/"
+                  >
+                    <ins>Maggie</ins>
+                  </a>{" "}
+                  (story inspiration), and{" "}
+                  <a
+                    target="_blank"
+                    href="https://stevens-portfolio-09772d.webflow.io"
+                  >
+                    <ins>Steven</ins>
+                  </a>{" "}
+                  (visual support).
                 </DialogDescription>
                 <DialogFooter>
                   <DialogClose asChild>
