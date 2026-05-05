@@ -110,7 +110,13 @@ export function AppSidebar() {
         </SidebarGroup>
 
         <SidebarFooter className="mt-auto mb-8 ml-4">
-          <p className="text-sm">This app is created by Owen.</p>
+          <p className="text-sm">
+            This app is created by{" "}
+            <a target="_blank" href="https://owen-ca.com">
+              <ins>Owen</ins>
+            </a>
+            .
+          </p>
           <span className="text-sm">Version 1.0.2</span>
           {/* <p className="text-sm">To know more about me</p>
           <a
