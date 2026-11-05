@@ -43,7 +43,7 @@ export default function IOSSupportPage() {
           </Faq>
           <Faq question="The camera recognized the wrong fruit.">
             Remove it from &quot;Your blend&quot; at the bottom of the Blend tab by tapping the ×, then pick
-            the right fruit or search for it under More fruits.
+            the right fruit or search for it in the search box at the top of the Blend tab.
           </Faq>
           <Faq question="A recipe won't generate.">
             Check your internet connection and tap Try Again. If a selected fruit is on your allergy list,
