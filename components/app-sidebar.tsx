@@ -1,7 +1,6 @@
 "use client";
 import {
   Sidebar,
-  SidebarContent,
   SidebarFooter,
   SidebarGroup,
   SidebarHeader,
@@ -118,6 +117,15 @@ export function AppSidebar() {
             .
           </p>
           <span className="text-sm">Version 1.0.2</span>
+          <p className="text-sm text-zinc-600">
+            <Link href="/privacy" className="hover:underline">
+              Privacy
+            </Link>
+            {" · "}
+            <Link href="/support/web" className="hover:underline">
+              Support
+            </Link>
+          </p>
           {/* <p className="text-sm">To know more about me</p>
           <a
             href="https://owen-ca.com"

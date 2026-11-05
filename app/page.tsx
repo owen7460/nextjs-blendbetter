@@ -18,6 +18,15 @@ export default function Home() {
         <p className="text-gray-800 text-sm absolute z-100 bottom-0 left-0 translate-x-1/2 -translate-y-1/2">
           Version 1.0.2
         </p>
+        <p className="text-gray-800 text-sm absolute z-100 bottom-0 right-0 -translate-x-1/2 -translate-y-1/2">
+          <Link href="/privacy" className="hover:underline">
+            Privacy
+          </Link>
+          {" · "}
+          <Link href="/support" className="hover:underline">
+            Support
+          </Link>
+        </p>
         <p className=" text-zinc-500 text-sm max-w-2xl text-center absolute z-100 top-7 left-1/2 -translate-x-1/2 -translate-y-1/2">
           Do you know each year, Canadians waste over 500,000 tonnes of fruit,
           which is equivalent to more than 4,000 Olympic-sized swimming pools
@@ -33,7 +42,7 @@ export default function Home() {
           <p className="textThird text-zinc-600 text-base max-w-2xl text-center fill-mode-both">
             This app is an AI-powered tool that helps you turn the fruits you
             have at home into delicious smoothies, bubble teas, beverages, or
-            cocktails. Even those fruit taste sour, but let's save them together
+            cocktails. Even those fruit taste sour, but let&apos;s save them together
             and stop wasting fruit!
           </p>
           <div className="flex items-center justify-center gap-8">
